@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#10cfc9" />
+  <meta name="description" content="منيو دايتلي - وجبات صحية مع السعرات والبروتين والكارب والدهون" />
+  <title>Dietly Menu | منيو دايتلي</title>
+  <link rel="icon" href="assets/dietly-logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="paper-noise" aria-hidden="true"></div>
+
+  <button class="menu-trigger" id="menuTrigger" aria-label="فتح أقسام المنيو" aria-expanded="false">
+    <span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span data-ar="الأقسام" data-en="Sections">الأقسام</span>
+  </button>
+
+  <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+  <aside class="drawer" id="drawer" aria-hidden="true" aria-label="أقسام المنيو">
+    <div class="drawer-head">
+      <div>
+        <strong data-ar="انتقل بسرعة" data-en="Quick navigation">انتقل بسرعة</strong>
+        <small data-ar="اختر القسم المطلوب" data-en="Choose a menu section">اختر القسم المطلوب</small>
+      </div>
+      <button class="icon-button" id="closeDrawer" aria-label="إغلاق">×</button>
+    </div>
+    <nav id="drawerNav" class="drawer-nav"></nav>
+    <div class="drawer-contact">
+      <a href="https://www.instagram.com/dietly.kw/" target="_blank" rel="noreferrer">@dietly.kw</a>
+    </div>
+  </aside>
+
+  <header class="site-header">
+    <div class="header-actions">
+      <button class="lang-toggle" id="langToggle" aria-label="Change language">
+        <span class="lang-ar active">عربي</span>
+        <span class="divider">/</span>
+        <span class="lang-en">EN</span>
+      </button>
+    </div>
+    <img class="brand-logo" src="assets/dietly-logo.png" alt="Dietly" width="420" height="300" />
+    <p class="eyebrow" data-ar="منيو صحي متكامل" data-en="A complete healthy menu">منيو صحي متكامل</p>
+    <h1 data-ar="اختيارك الصحي صار أسهل" data-en="Healthy choices made easier">اختيارك الصحي صار أسهل</h1>
+    <p class="hero-copy" data-ar="تصفّح الوجبات، قارن القيم الغذائية، وانتقل بين الأقسام بسرعة." data-en="Browse meals, compare nutrition values, and jump between sections instantly.">
+      تصفّح الوجبات، قارن القيم الغذائية، وانتقل بين الأقسام بسرعة.
+    </p>
+    <div class="hero-buttons">
+      <a class="primary-button" href="tel:+96566078810" data-ar="اتصل بالمطعم" data-en="Call restaurant">اتصل بالمطعم</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="menu-tools" aria-label="أدوات المنيو">
+      <label class="search-box">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/></svg>
+        <input id="searchInput" type="search" autocomplete="off" placeholder="ابحث عن وجبة..." aria-label="ابحث عن وجبة" />
+        <button id="clearSearch" type="button" aria-label="مسح البحث" hidden>×</button>
+      </label>
+      <div class="quick-chips" id="quickChips" aria-label="الأقسام"></div>
+    </section>
+
+    <div class="search-status" id="searchStatus" hidden></div>
+    <div id="menuRoot"></div>
+
+    <section class="visit-card" id="contact">
+      <div class="visit-copy">
+        <span class="mini-label" data-ar="زورونا" data-en="Visit us">زورونا</span>
+        <h2 data-ar="Dietly - صباح السالم" data-en="Dietly - Sabah Al-Salem">Dietly - صباح السالم</h2>
+        <p data-ar="قطعة 1، شارع 121، مبنى 137" data-en="Block 1, Street 121, Building 137">قطعة 1، شارع 121، مبنى 137</p>
+      </div>
+      <div class="visit-links">
+        <a href="tel:+96566078810"><b>66078810</b><span data-ar="للتواصل" data-en="Contact">للتواصل</span></a>
+        <a href="https://www.instagram.com/dietly.kw/" target="_blank" rel="noreferrer"><b>@dietly.kw</b><span>Instagram</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <img src="assets/dietly-logo.png" alt="Dietly" />
+    <p data-ar="الأكل الصحي بدون تعقيد." data-en="Healthy food without the complication.">الأكل الصحي بدون تعقيد.</p>
+    <small>© 2026 Dietly</small>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="العودة للأعلى">↑</button>
+  <script src="app.js"></script>
+</body>
+</html>
